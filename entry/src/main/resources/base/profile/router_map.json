@@ -1,0 +1,49 @@
+{
+  "routerMap": [
+    {
+      "name": "session_detail",
+      "pageSourceFile": "src/main/ets/pages/SessionDetailPage.ets",
+      "buildFunction": "SessionDetailPageBuilder"
+    },
+    {
+      "name": "session_agent_files",
+      "pageSourceFile": "src/main/ets/pages/SessionAgentFilesPage.ets",
+      "buildFunction": "SessionAgentFilesPageBuilder"
+    },
+    {
+      "name": "devices",
+      "pageSourceFile": "src/main/ets/pages/DevicesPage.ets",
+      "buildFunction": "DevicesPageBuilder"
+    },
+    {
+      "name": "device_detail",
+      "pageSourceFile": "src/main/ets/pages/DeviceDetailPage.ets",
+      "buildFunction": "DeviceDetailPageBuilder"
+    },
+    {
+      "name": "terminal",
+      "pageSourceFile": "src/main/ets/pages/TerminalPage.ets",
+      "buildFunction": "TerminalPageBuilder"
+    },
+    {
+      "name": "files",
+      "pageSourceFile": "src/main/ets/pages/FilesPage.ets",
+      "buildFunction": "FilesPageBuilder"
+    },
+    {
+      "name": "pairing",
+      "pageSourceFile": "src/main/ets/pages/DevicePairingPage.ets",
+      "buildFunction": "DevicePairingPageBuilder"
+    },
+    {
+      "name": "archived_sessions",
+      "pageSourceFile": "src/main/ets/pages/ArchivedSessionsPage.ets",
+      "buildFunction": "ArchivedSessionsPageBuilder"
+    },
+    {
+      "name": "new_project",
+      "pageSourceFile": "src/main/ets/pages/NewProjectPage.ets",
+      "buildFunction": "NewProjectPageBuilder"
+    }
+  ]
+}
