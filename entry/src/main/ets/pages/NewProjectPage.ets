@@ -5,11 +5,11 @@ import { FilesApi, RemoteDirectoryEntry } from '../api/FilesApi';
 import { SessionsApi } from '../api/SessionsApi';
 import { RemoteProject } from '../api/SessionDtos';
 import { AuthSessionStore } from '../auth/AuthSessionStore';
-import { ApiException, errorMessageFrom } from '../common/ApiException';
+import { ApiException, errorMessageFrom } from 'common';
 import { availableProjectName, workspaceProject, workspaceProjectName } from '../common/WorkspaceProjects';
 import { ConfirmDialog } from '../components/ConfirmDialog';
 import { ErrorState, LoadingState } from '../components/StateViews';
-import { APP_IS_DARK_KEY, getColors } from '../designsystem/ColorTokens';
+import { APP_IS_DARK_KEY, getColors } from 'common';
 
 @Component
 export struct NewProjectPage {

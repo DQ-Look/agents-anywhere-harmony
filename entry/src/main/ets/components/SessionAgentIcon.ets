@@ -1,4 +1,4 @@
-import { APP_IS_DARK_KEY, getColors } from '../designsystem/ColorTokens';
+import { APP_IS_DARK_KEY, getColors } from 'common';
 
 export const SESSION_AGENT_KIND_CODEX: string = 'codex';
 export const SESSION_AGENT_KIND_CLAUDE: string = 'claude';

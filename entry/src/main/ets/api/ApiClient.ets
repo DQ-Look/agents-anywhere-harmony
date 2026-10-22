@@ -1,13 +1,13 @@
 import { http } from '@kit.NetworkKit';
 import { util } from '@kit.ArkTS';
-import { ApiException } from '../common/ApiException';
-import { apiUrlCandidates, normalizeServerOrigin, rememberApiUrl } from '../common/ApiUrls';
+import { ApiException } from 'common';
+import { apiUrlCandidates, normalizeServerOrigin, rememberApiUrl } from 'common';
 import {
   objGetOptString,
   objGetString,
   parseJsonRecord,
   recordOrNull
-} from '../common/Json';
+} from 'common';
 
 const CONNECT_TIMEOUT_MS = 10000;
 const READ_TIMEOUT_MS = 15000;

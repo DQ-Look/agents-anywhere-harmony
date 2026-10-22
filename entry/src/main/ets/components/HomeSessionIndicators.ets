@@ -1,4 +1,4 @@
-import { APP_IS_DARK_KEY, getColors } from '../designsystem/ColorTokens';
+import { APP_IS_DARK_KEY, getColors } from 'common';
 
 export const SESSION_INDICATOR_NONE: string = 'none';
 export const SESSION_INDICATOR_BUSY: string = 'busy';

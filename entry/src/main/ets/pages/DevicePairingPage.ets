@@ -3,7 +3,7 @@ import { pasteboard } from '@kit.BasicServicesKit';
 import { SharedApiClient } from '../api/SharedApiClient';
 import { RemoteDeviceCredential, DevicesApi } from '../api/DevicesApi';
 import { AuthSessionStore } from '../auth/AuthSessionStore';
-import { errorMessageFrom } from '../common/ApiException';
+import { errorMessageFrom } from 'common';
 import {
   PAIRING_STEP_CONNECTION,
   PAIRING_STEP_DESKTOP_INSTALL,
@@ -20,7 +20,7 @@ import {
   randomPairingDeviceName,
   PairingMonitor
 } from '../feature/DevicePairingFlow';
-import { APP_IS_DARK_KEY, getColors } from '../designsystem/ColorTokens';
+import { APP_IS_DARK_KEY, getColors } from 'common';
 
 const DESKTOP_DOWNLOAD_URL = 'https://agents-anywhere.com/download';
 

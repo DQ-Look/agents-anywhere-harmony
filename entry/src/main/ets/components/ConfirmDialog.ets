@@ -1,4 +1,4 @@
-import { APP_IS_DARK_KEY, getColors } from '../designsystem/ColorTokens';
+import { APP_IS_DARK_KEY, getColors } from 'common';
 
 /**
  * Non-deprecated replacement for `AlertDialog.show` confirmations.

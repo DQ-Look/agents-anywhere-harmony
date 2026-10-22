@@ -1,5 +1,5 @@
 import { DEBUG } from '../../../../build/default/generated/profile/default/BuildProfile';
-import { normalizeServerOrigin, usesLocalNetworkHost } from '../common/ApiUrls';
+import { normalizeServerOrigin, usesLocalNetworkHost } from 'common';
 
 export class LoginServerConnection {
   readonly serverUrl: string;

@@ -3,8 +3,8 @@ import { RemoteProject, RemoteSession, RemoteSessionPage } from '../api/SessionD
 import { SharedApiClient } from '../api/SharedApiClient';
 import { AuthSessionStore } from '../auth/AuthSessionStore';
 import { HomeMenuAnchor } from '../components/HomeProjectActionMenuOverlay';
-import { APP_IS_DARK_KEY, getColors } from '../designsystem/ColorTokens';
-import { showToast } from '../utils/Toast';
+import { APP_IS_DARK_KEY, getColors } from 'common';
+import { showToast } from 'common';
 
 const ARCHIVED_PAGE_LIMIT = 100;
 

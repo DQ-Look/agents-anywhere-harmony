@@ -50,8 +50,8 @@ import {
   PROJECT_STATUS_FILTER_ARCHIVED,
   PROJECT_STATUS_FILTER_ALL
 } from '../auth/HomeProjectPreferenceStore';
-import { ApiException, errorMessageFrom } from '../common/ApiException';
-import { NetworkMonitor } from '../common/NetworkMonitor';
+import { ApiException, errorMessageFrom } from 'common';
+import { NetworkMonitor } from 'common';
 import {
   initialRemoteFilePath,
   isHiddenFileEntryName,
@@ -65,7 +65,7 @@ import {
   RuntimePermissionStrings,
   LocalizedRuntimePermission,
   localizeRuntimePermission
-} from '../common/RuntimePermissionLocalization';
+} from 'common';
 import { availableProjectName, workspaceProject, workspaceProjectName } from '../common/WorkspaceProjects';
 import {
   NewSessionSheetOverlay,
@@ -87,8 +87,8 @@ import { SessionActionMenuOverlay } from '../components/SessionActionMenuOverlay
 import { EmptyState, ErrorState } from '../components/StateViews';
 import { StringInputDialog } from '../components/StringInputDialog';
 import { ProfileDrawerOverlay } from '../components/ProfileDrawerOverlay';
-import { APP_IS_DARK_KEY, getColors } from '../designsystem/ColorTokens';
-import { showToast } from '../utils/Toast';
+import { APP_IS_DARK_KEY, getColors } from 'common';
+import { showToast } from 'common';
 
 const RETRY_BASE_DELAY_MS = 1000;
 const RETRY_MAX_DELAY_MS = 30000;

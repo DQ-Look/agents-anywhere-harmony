@@ -1,6 +1,6 @@
 import { ApiClient } from './ApiClient';
-import { objGetOptString, objGetString } from '../common/Json';
-import { ApiException } from '../common/ApiException';
+import { objGetOptString, objGetString } from 'common';
+import { ApiException } from 'common';
 
 export interface AppRelease {
   versionName: string;

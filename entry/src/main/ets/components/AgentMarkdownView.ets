@@ -1,9 +1,9 @@
 import { common, OpenLinkOptions } from '@kit.AbilityKit';
 import { pasteboard } from '@kit.BasicServicesKit';
-import { MdBlock, MdSpan, mdTextHash } from '../common/Markdown';
-import { APP_IS_DARK_KEY, getColors } from '../designsystem/ColorTokens';
-import { RadiusTokens } from '../designsystem/TypeTokens';
-import { showToast } from '../utils/Toast';
+import { MdBlock, MdSpan, mdTextHash } from 'common';
+import { APP_IS_DARK_KEY, getColors } from 'common';
+import { RadiusTokens } from 'common';
+import { showToast } from 'common';
 
 function mdBlockKey(block: MdBlock, index: number): string {
   let content = `${block.kind}|${block.language}|${block.codeText}`;

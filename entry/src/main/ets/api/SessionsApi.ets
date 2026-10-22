@@ -1,6 +1,6 @@
 import { ApiClient, FetchedFileData, UploadFilePart } from './ApiClient';
-import { objGetArray, objGetRecord, objGetString, recordsFromArray, requireRecord } from '../common/Json';
-import { ApiException } from '../common/ApiException';
+import { objGetArray, objGetRecord, objGetString, recordsFromArray, requireRecord } from 'common';
+import { ApiException } from 'common';
 import {
   parseRemoteCommandResult,
   parseRemoteDownloadedAttachment,

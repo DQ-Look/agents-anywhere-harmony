@@ -13,8 +13,8 @@
  * limitations under the License.
  */
 
-import { APP_IS_DARK_KEY, getColors } from '../designsystem/ColorTokens';
-import { RadiusTokens } from '../designsystem/TypeTokens';
+import { APP_IS_DARK_KEY, getColors } from 'common';
+import { RadiusTokens } from 'common';
 
 /**
  * A read-only diff viewer for unified / git-style diff text.

@@ -5,12 +5,12 @@ import { SharedApiClient } from '../api/SharedApiClient';
 import { AnnouncementReadStore } from '../auth/AnnouncementReadStore';
 import { AppUpdateIgnoreStore } from '../auth/AppUpdateIgnoreStore';
 import { AuthSessionStore } from '../auth/AuthSessionStore';
-import { MdBlock, parseMarkdownBlocks } from '../common/Markdown';
-import { AppConfig } from '../common/AppConfig';
+import { MdBlock, parseMarkdownBlocks } from 'common';
+import { AppConfig } from 'common';
 import { AnnouncementGateOverlay } from '../components/AnnouncementGateOverlay';
 import { AppUpdatePromptOverlay } from '../components/AppUpdatePromptOverlay';
-import { APP_IS_DARK_KEY, getColors } from '../designsystem/ColorTokens';
-import { showToast } from '../utils/Toast';
+import { APP_IS_DARK_KEY, getColors } from 'common';
+import { showToast } from 'common';
 import { HomePage } from './HomePage';
 import { LoginPage } from './LoginPage';
 

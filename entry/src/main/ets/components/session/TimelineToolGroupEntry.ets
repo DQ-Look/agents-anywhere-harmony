@@ -12,7 +12,7 @@ import {
   TimelineToolRowModel,
   emptyTimelineToolGroupModel
 } from '../../common/TimelineSummaries';
-import { getColors } from '../../designsystem/ColorTokens';
+import { getColors } from 'common';
 import { TimelineToolEntry } from './TimelineToolEntry';
 
 @Component

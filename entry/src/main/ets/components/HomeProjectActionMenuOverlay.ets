@@ -1,4 +1,4 @@
-import { APP_IS_DARK_KEY, getColors } from '../designsystem/ColorTokens';
+import { APP_IS_DARK_KEY, getColors } from 'common';
 
 // Page-root-relative bounds of an anchor component, used to position the
 // anchored popups (action menu / filter menu). Captured via onAreaChange with

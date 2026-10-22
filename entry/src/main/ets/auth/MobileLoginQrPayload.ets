@@ -1,9 +1,9 @@
-import { normalizeServerOrigin } from '../common/ApiUrls';
+import { normalizeServerOrigin } from 'common';
 import {
   objGetOptString,
   objGetString,
   parseJsonRecord
-} from '../common/Json';
+} from 'common';
 
 /**
  * Payload encoded in the mobile sign-in QR shown by the desktop / web client.

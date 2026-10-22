@@ -4,7 +4,7 @@ import { DevicesApi, RemoteDevice } from '../api/DevicesApi';
 import { FilesApi, RemoteDirectoryEntry, RemoteTextFile } from '../api/FilesApi';
 import { SharedApiClient } from '../api/SharedApiClient';
 import { AuthSessionStore } from '../auth/AuthSessionStore';
-import { errorMessageFrom } from '../common/ApiException';
+import { errorMessageFrom } from 'common';
 import {
   FilePreviewLine,
   FilePreviewLineDataSource,
@@ -23,8 +23,8 @@ import {
 import { FileRowMenuOverlay } from '../components/FileRowMenuOverlay';
 import { HomeMenuAnchor } from '../components/HomeProjectActionMenuOverlay';
 import { EmptyState } from '../components/StateViews';
-import { APP_IS_DARK_KEY, getColors } from '../designsystem/ColorTokens';
-import { showToast } from '../utils/Toast';
+import { APP_IS_DARK_KEY, getColors } from 'common';
+import { showToast } from 'common';
 
 const HOME_ROOT = '~';
 const START_PATH = '.';

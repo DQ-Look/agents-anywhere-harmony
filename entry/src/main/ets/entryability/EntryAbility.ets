@@ -22,9 +22,9 @@ import { AppUpdateIgnoreStore } from '../auth/AppUpdateIgnoreStore';
 import { NewSessionPreferenceStore } from '../auth/NewSessionPreferenceStore';
 import { SidebarViewModeStore } from '../auth/SidebarViewModeStore';
 import { ComposerDraftStore } from '../feature/ComposerDraftStore';
-import { APP_IS_DARK_KEY, APP_MODE_KEY } from '../designsystem/ColorTokens';
-import { AppearanceSettings } from '../designsystem/AppearanceSettings';
-import { LanguageSettings } from '../i18n/LanguageSettings';
+import { APP_IS_DARK_KEY, APP_MODE_KEY } from 'common';
+import { AppearanceSettings } from 'common';
+import { LanguageSettings } from 'common';
 
 const DOMAIN = 0x0000;
 

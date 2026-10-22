@@ -9,12 +9,12 @@ import { RealtimeSocketListener, RealtimeWebSocket } from '../api/RealtimeWebSoc
 import { SharedApiClient } from '../api/SharedApiClient';
 import { RemoteTerminal, TerminalApi } from '../api/TerminalApi';
 import { AuthSessionStore } from '../auth/AuthSessionStore';
-import { errorMessageFrom } from '../common/ApiException';
-import { NetworkMonitor } from '../common/NetworkMonitor';
-import { objGetOptNumber, objGetString, parseJsonRecord } from '../common/Json';
+import { errorMessageFrom } from 'common';
+import { NetworkMonitor } from 'common';
+import { objGetOptNumber, objGetString, parseJsonRecord } from 'common';
 import { TerminalEmulator } from '../common/TerminalEmulator';
 import { TerminalChunkDataSource, TerminalChunkRow, TerminalRenderBuilder, TerminalSegment } from '../common/TerminalRender';
-import { APP_IS_DARK_KEY, getColors } from '../designsystem/ColorTokens';
+import { APP_IS_DARK_KEY, getColors } from 'common';
 
 const TERMINAL_LABEL_PREFIX = 'HMOS ';
 const DEFAULT_COLS = 80;

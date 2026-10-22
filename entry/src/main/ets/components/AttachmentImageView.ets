@@ -2,10 +2,10 @@ import { image } from '@kit.ImageKit';
 import { util } from '@kit.ArkTS';
 import { SharedApiClient } from '../api/SharedApiClient';
 import { AuthSessionStore } from '../auth/AuthSessionStore';
-import { errorMessageFrom } from '../common/ApiException';
+import { errorMessageFrom } from 'common';
 import { RemoteDownloadedAttachment } from '../api/SessionDtos';
 import { SessionsApi } from '../api/SessionsApi';
-import { getColors } from '../designsystem/ColorTokens';
+import { getColors } from 'common';
 
 const ATTACHMENT_IMAGE_CACHE_LIMIT = 32;
 const ATTACHMENT_MAX_DOWNLOAD_BYTES = 26214400;

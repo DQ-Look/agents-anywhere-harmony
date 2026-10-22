@@ -1,5 +1,5 @@
 import { RemoteDevice, RemoteDeviceRuntime } from '../api/DevicesApi';
-import { APP_IS_DARK_KEY, getColors } from '../designsystem/ColorTokens';
+import { APP_IS_DARK_KEY, getColors } from 'common';
 
 export interface NewSessionPendingAttachment {
   localId: string;

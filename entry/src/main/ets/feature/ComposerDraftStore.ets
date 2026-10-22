@@ -2,7 +2,7 @@ import { preferences } from '@kit.ArkData';
 import { common } from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { RemoteUploadedAttachment, parseRemoteUploadedAttachment } from '../api/SessionDtos';
-import { parseJsonRecord, recordsFromArray, objGetArray, objGetOptString } from '../common/Json';
+import { parseJsonRecord, recordsFromArray, objGetArray, objGetOptString } from 'common';
 
 const PREF_NAME: string = 'composer-drafts';
 const LOG_TAG: string = 'AgentsAnywhere.Draft';

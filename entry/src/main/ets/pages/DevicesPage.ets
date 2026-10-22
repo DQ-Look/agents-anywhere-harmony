@@ -2,8 +2,8 @@ import { ApiClient } from '../api/ApiClient';
 import { DevicesApi, RemoteDevice } from '../api/DevicesApi';
 import { SharedApiClient } from '../api/SharedApiClient';
 import { AuthSessionStore } from '../auth/AuthSessionStore';
-import { errorMessageFrom } from '../common/ApiException';
-import { APP_IS_DARK_KEY, getColors } from '../designsystem/ColorTokens';
+import { errorMessageFrom } from 'common';
+import { APP_IS_DARK_KEY, getColors } from 'common';
 
 // Online-agent preview for a device row, mirrors android
 // DeviceAgentPreviewState: count >= 0 loaded, -1 unavailable.

@@ -1,5 +1,5 @@
 import { ApiClient } from './ApiClient';
-import { objGetOptString, objGetRecord } from '../common/Json';
+import { objGetOptString, objGetRecord } from 'common';
 
 export interface PublicAnnouncement {
   markdown: string;

@@ -1,6 +1,6 @@
 import { util } from '@kit.ArkTS';
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
-import { objGetArray, objGetBool, objGetNumber, objGetOptNumber, objGetOptString, objGetRecord, objGetString, recordOrNull, recordsFromArray, requireRecord } from '../common/Json';
+import { objGetArray, objGetBool, objGetNumber, objGetOptNumber, objGetOptString, objGetRecord, objGetString, recordOrNull, recordsFromArray, requireRecord } from 'common';
 
 export interface RemoteSession {
   id: string;

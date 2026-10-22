@@ -1,6 +1,6 @@
 import { image } from '@kit.ImageKit';
 import { RemoteTimelineAttachment } from '../api/SessionDtos';
-import { APP_IS_DARK_KEY, getColors } from '../designsystem/ColorTokens';
+import { APP_IS_DARK_KEY, getColors } from 'common';
 import { loadAttachmentPixelMap } from './AttachmentImageView';
 
 const ATTACHMENT_PREVIEW_MAX_SCALE = 4;

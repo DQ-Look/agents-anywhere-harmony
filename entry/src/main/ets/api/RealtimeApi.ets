@@ -1,5 +1,5 @@
 import { ApiClient } from './ApiClient';
-import { webSocketApiUrl } from '../common/ApiUrls';
+import { webSocketApiUrl } from 'common';
 import {
   objGetArray,
   objGetBool,
@@ -8,7 +8,7 @@ import {
   objGetString,
   parseJsonRecord,
   recordsFromArray
-} from '../common/Json';
+} from 'common';
 import { parseRemoteDevice, RemoteDevice } from './DevicesApi';
 import { parseRemoteProject, parseRemoteSession, parseSessionEventEnvelope, RemoteProject, RemoteSession, RemoteSessionEventEnvelope } from './SessionDtos';
 import {

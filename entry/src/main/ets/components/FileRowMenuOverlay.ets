@@ -1,4 +1,4 @@
-import { getColors } from '../designsystem/ColorTokens';
+import { getColors } from 'common';
 
 @Component
 export struct FileRowMenuOverlay {

@@ -2,7 +2,7 @@ import { preferences } from '@kit.ArkData';
 import { Context } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { parseJsonRecord, objGetArray } from '../common/Json';
+import { parseJsonRecord, objGetArray } from 'common';
 
 const STORE_NAME = 'agents_anywhere_home_project';
 const LOG_TAG = 'AgentsAnywhere.HomeProject';

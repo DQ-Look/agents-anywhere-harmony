@@ -1,13 +1,13 @@
 import { ApiClient } from './ApiClient';
 import { AuthConfigResponse, AuthMeResponse, OAuthTokenResponse } from './AuthDtos';
-import { ApiException } from '../common/ApiException';
+import { ApiException } from 'common';
 import {
   objGetBool,
   objGetNumber,
   objGetOptString,
   objGetRecord,
   objGetString
-} from '../common/Json';
+} from 'common';
 
 export interface MobileLoginStatus {
   status: string;

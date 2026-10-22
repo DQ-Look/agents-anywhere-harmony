@@ -1,6 +1,6 @@
 import { ApiClient } from './ApiClient';
-import { webSocketApiUrl } from '../common/ApiUrls';
-import { objGetArray, objGetNumber, objGetOptNumber, objGetOptString, objGetString, recordOrNull } from '../common/Json';
+import { webSocketApiUrl } from 'common';
+import { objGetArray, objGetNumber, objGetOptNumber, objGetOptString, objGetString, recordOrNull } from 'common';
 
 export interface RemoteTerminal {
   terminalId: string;

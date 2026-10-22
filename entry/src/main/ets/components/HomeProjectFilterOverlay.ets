@@ -1,4 +1,4 @@
-import { APP_IS_DARK_KEY, getColors } from '../designsystem/ColorTokens';
+import { APP_IS_DARK_KEY, getColors } from 'common';
 import {
   PROJECT_STATUS_FILTER_ACTIVE,
   PROJECT_STATUS_FILTER_ARCHIVED,

@@ -15,9 +15,9 @@ import {
   WebLoginSession,
   WEB_LOGIN_CALLBACK_URI
 } from '../auth/WebLoginModels';
-import { AppConfig } from '../common/AppConfig';
-import { ApiException, errorMessageFrom } from '../common/ApiException';
-import { APP_IS_DARK_KEY, getColors } from '../designsystem/ColorTokens';
+import { AppConfig } from 'common';
+import { ApiException, errorMessageFrom } from 'common';
+import { APP_IS_DARK_KEY, getColors } from 'common';
 
 const PHASE_METHOD_CHOICE = 0;
 const PHASE_HOST_CHOICE = 1;

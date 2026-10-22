@@ -18,9 +18,9 @@ import {
 } from '../api/SessionDtos';
 import { SessionsApi } from '../api/SessionsApi';
 import { AuthSessionStore } from '../auth/AuthSessionStore';
-import { errorMessageFrom } from '../common/ApiException';
-import { MdBlock, parseMarkdownBlocks } from '../common/Markdown';
-import { NetworkMonitor } from '../common/NetworkMonitor';
+import { errorMessageFrom } from 'common';
+import { MdBlock, parseMarkdownBlocks } from 'common';
+import { NetworkMonitor } from 'common';
 import { ComposerDraftStore } from '../feature/ComposerDraftStore';
 import {
   OPTIMISTIC_PREFIX, OptimisticMessageStore
@@ -46,7 +46,7 @@ import { common, OpenLinkOptions } from '@kit.AbilityKit';
 import { camera, cameraPicker } from '@kit.CameraKit';
 import { util } from '@kit.ArkTS';
 import { display } from '@kit.ArkUI';
-import { showToast } from '../utils/Toast';
+import { showToast } from 'common';
 import {
   NoticeAnswerDraft,
   NoticeInputField,
@@ -59,8 +59,8 @@ import {
   noticeInputFields,
   noticeInputRequestForm
 } from '../feature/NoticeInputForm';
-import { APP_IS_DARK_KEY, getColors } from '../designsystem/ColorTokens';
-import { RadiusTokens } from '../designsystem/TypeTokens';
+import { APP_IS_DARK_KEY, getColors } from 'common';
+import { RadiusTokens } from 'common';
 
 interface TimelineEntry {
   item: RemoteTimelineItem;

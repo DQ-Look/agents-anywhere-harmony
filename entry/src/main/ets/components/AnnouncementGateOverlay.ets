@@ -1,6 +1,6 @@
-import { MdBlock } from '../common/Markdown';
+import { MdBlock } from 'common';
 import { AgentMarkdownView } from './AgentMarkdownView';
-import { APP_IS_DARK_KEY, getColors } from '../designsystem/ColorTokens';
+import { APP_IS_DARK_KEY, getColors } from 'common';
 
 @Component
 export struct AnnouncementGateOverlay {

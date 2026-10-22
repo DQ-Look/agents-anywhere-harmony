@@ -13,7 +13,7 @@ import {
   emptyTimelineToolRowModel,
   timelineKindSymbol
 } from '../../common/TimelineSummaries';
-import { getColors } from '../../designsystem/ColorTokens';
+import { getColors } from 'common';
 import { TimelineToolPanel } from './TimelineToolPanel';
 
 const REASONING_TEXT_MAX_HEIGHT_VP = 260;

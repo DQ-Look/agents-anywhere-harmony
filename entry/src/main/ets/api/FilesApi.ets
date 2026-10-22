@@ -1,5 +1,5 @@
 import { ApiClient } from './ApiClient';
-import { objGetBool, objGetNumber, objGetOptNumber, objGetOptString, objGetRecord, objGetString } from '../common/Json';
+import { objGetBool, objGetNumber, objGetOptNumber, objGetOptString, objGetRecord, objGetString } from 'common';
 
 export interface RemoteDirectoryEntry {
   name: string;

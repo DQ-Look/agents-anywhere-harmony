@@ -2,7 +2,7 @@ import { preferences } from '@kit.ArkData';
 import { Context } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { normalizeServerOrigin } from '../common/ApiUrls';
+import { normalizeServerOrigin } from 'common';
 
 const STORE_NAME = 'agents_anywhere_auth';
 const KEY_SERVER_URL = 'server_url';

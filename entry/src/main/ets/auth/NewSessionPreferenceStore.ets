@@ -2,7 +2,7 @@ import { preferences } from '@kit.ArkData';
 import { Context } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { parseJsonRecord, objGetArray, objGetOptString, recordOrNull } from '../common/Json';
+import { parseJsonRecord, objGetArray, objGetOptString, recordOrNull } from 'common';
 
 const STORE_NAME = 'agents_anywhere_new_session';
 const LOG_TAG = 'AgentsAnywhere.NewSession';

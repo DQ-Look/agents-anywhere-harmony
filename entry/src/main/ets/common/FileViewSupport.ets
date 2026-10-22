@@ -1,4 +1,4 @@
-import { getColors } from '../designsystem/ColorTokens';
+import { getColors } from 'common';
 
 export function isWindowsDriveStylePath(path: string): boolean {
   if (path.length < 2) {

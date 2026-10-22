@@ -9,9 +9,9 @@
 import { pasteboard } from '@kit.BasicServicesKit';
 import { RemoteTimelineFileChange } from '../../api/SessionDtos';
 import { displayPathFor, fileChangeActionOf } from '../../common/TimelineSummaries';
-import { getColors } from '../../designsystem/ColorTokens';
+import { getColors } from 'common';
 import { DiffCodeView } from '../DiffCodeView';
-import { showToast } from '../../utils/Toast';
+import { showToast } from 'common';
 
 const OUTPUT_MAX_HEIGHT_VP = 260;
 const CHANGE_DIFF_MAX_HEIGHT_VP = 300;

@@ -1,5 +1,5 @@
 import { ApiClient } from './ApiClient';
-import { objGetArray, objGetBool, objGetNumber, objGetOptString, objGetRecord, objGetString, recordsFromArray } from '../common/Json';
+import { objGetArray, objGetBool, objGetNumber, objGetOptString, objGetRecord, objGetString, recordsFromArray } from 'common';
 
 export const MODEL_CATALOG_CAPABILITY: string = 'catalog.model';
 export const PERMISSION_CATALOG_CAPABILITY: string = 'catalog.permission';
