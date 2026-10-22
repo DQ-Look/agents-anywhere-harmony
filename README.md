@@ -32,9 +32,7 @@ hvigorw assembleHap --mode module -p product=default --no-daemon
 
 ## CI
 
-GitHub Actions 在 push / PR 时构建 unsigned HAP。需要在仓库 **Settings → Secrets and variables → Actions → Variables** 设置：
-
-- `COMMANDLINE_TOOLS_URL`：HarmonyOS command line tools（linux-x64）zip 包直链
+GitHub Actions 在 push / PR 时构建 unsigned HAP。构建运行在公共容器镜像 `ghcr.io/dalongzhuazi/harmonyos-ci:api26r`（内置 HarmonyOS 26.0.0.821 正式版 command-line-tools）中，无需配置任何变量或密钥。
 
 ## 文档
 

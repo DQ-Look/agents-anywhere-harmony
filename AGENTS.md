@@ -26,7 +26,7 @@ devecocli build
 ohpm install && hvigorw assembleHap --mode module -p product=default --no-daemon
 ```
 
-修改 `.ets` 后、完整构建前可运行 arkts 静态检查。CI（push / PR）执行完整构建，需设置仓库变量 `COMMANDLINE_TOOLS_URL`（见 README）。
+修改 `.ets` 后、完整构建前可运行 arkts 静态检查。CI（push / PR）在容器镜像内执行完整构建（见 README），无需配置仓库变量。
 
 ## 跨仓库协作
 
