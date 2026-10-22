@@ -581,6 +581,26 @@
       "value": "这台电脑"
     },
     {
+      "name": "common_rename",
+      "value": "重命名"
+    },
+    {
+      "name": "common_archive",
+      "value": "归档"
+    },
+    {
+      "name": "common_unarchive",
+      "value": "取消归档"
+    },
+    {
+      "name": "common_pin",
+      "value": "置顶"
+    },
+    {
+      "name": "common_unpin",
+      "value": "取消置顶"
+    },
+    {
       "name": "common_cancel",
       "value": "取消"
     },

@@ -581,6 +581,26 @@
       "value": "This PC"
     },
     {
+      "name": "common_rename",
+      "value": "Rename"
+    },
+    {
+      "name": "common_archive",
+      "value": "Archive"
+    },
+    {
+      "name": "common_unarchive",
+      "value": "Unarchive"
+    },
+    {
+      "name": "common_pin",
+      "value": "Pin"
+    },
+    {
+      "name": "common_unpin",
+      "value": "Unpin"
+    },
+    {
       "name": "common_cancel",
       "value": "Cancel"
     },

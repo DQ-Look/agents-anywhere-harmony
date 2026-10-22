@@ -12,7 +12,7 @@ export struct SessionActionMenuOverlay {
   onClose: () => void = () => {};
 
   @Builder
-  menuRow(label: string, action: () => void) {
+  menuRow(label: ResourceStr, action: () => void) {
     Row() {
       Text(label)
         .fontSize(16)
@@ -47,22 +47,22 @@ export struct SessionActionMenuOverlay {
           .textOverflow({ overflow: TextOverflow.Ellipsis })
           .width('100%')
           .padding({ top: 12, left: 20, right: 20 })
-        this.menuRow('Rename', (): void => {
+        this.menuRow($r('app.string.common_rename'), (): void => {
           this.onRename();
         })
         Divider()
           .color(getColors().border)
-        this.menuRow(this.archived ? 'Unarchive' : 'Archive', (): void => {
+        this.menuRow(this.archived ? $r('app.string.common_unarchive') : $r('app.string.common_archive'), (): void => {
           this.onToggleArchived();
         })
         Divider()
           .color(getColors().border)
-        this.menuRow(this.pinned ? 'Unpin' : 'Pin', (): void => {
+        this.menuRow(this.pinned ? $r('app.string.common_unpin') : $r('app.string.common_pin'), (): void => {
           this.onTogglePinned();
         })
         Divider()
           .color(getColors().border)
-        this.menuRow('Cancel', (): void => {
+        this.menuRow($r('app.string.common_cancel'), (): void => {
           this.onClose();
         })
       }
