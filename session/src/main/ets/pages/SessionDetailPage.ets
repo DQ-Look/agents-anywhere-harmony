@@ -1260,6 +1260,19 @@ export struct SessionDetailPage {
     this.saveComposerDraft();
   }
 
+  /**
+   * Picker URIs percent-encode non-ASCII file names (e.g. Chinese names turn
+   * into %E6%AC%A2...). Decode for display; fall back to the raw segment if
+   * the encoding is malformed.
+   */
+  private decodePickerFileName(raw: string): string {
+    try {
+      return decodeURIComponent(raw);
+    } catch (error) {
+      return raw;
+    }
+  }
+
   private mimeTypeFromName(name: string): string {
     const dot = name.lastIndexOf('.');
     if (dot < 0) {
@@ -1325,7 +1338,8 @@ export struct SessionDetailPage {
     try {
       const parts: UploadFilePart[] = [];
       for (const uri of uris) {
-        const fileName = uri.substring(uri.lastIndexOf('/') + 1) || 'local-file';
+        const rawName = uri.substring(uri.lastIndexOf('/') + 1) || 'local-file';
+        const fileName = this.decodePickerFileName(rawName);
         const bytes = await this.readUriBytes(uri);
         const part: UploadFilePart = {
           fileName: fileName,
@@ -1920,14 +1934,6 @@ export struct SessionDetailPage {
     return this.sending ? '…' : '➤';
   }
 
-  private attachmentButtonLabel(): string {
-    return this.attachmentPanelOpen ? '×' : '＋';
-  }
-
-  private attachmentButtonBackground(): string {
-    return this.attachmentPanelOpen ? getColors().secondaryActionBorder : getColors().sessionCodeSurface;
-  }
-
   private attachmentUploadLabel(): string {
     return this.uploadingAttachment ? '…' : 'Add';
   }
@@ -2007,7 +2013,7 @@ export struct SessionDetailPage {
           .fontColor(getColors().muted)
           .padding({ left: 4, right: 4, top: 1, bottom: 1 })
           .borderRadius(3)
-          .backgroundColor(getColors().secondaryActionBorder)
+          .backgroundColor(getColors().subtle)
         Column({ space: 2 }) {
           Text(attachment.name)
             .fontSize(13)
@@ -2762,7 +2768,7 @@ export struct SessionDetailPage {
                 }
                 .padding({ left: 8, right: 8, top: 4, bottom: 4 })
                 .borderRadius(12)
-                .backgroundColor(getColors().secondaryActionBorder)
+                .backgroundColor(getColors().subtle)
                 .margin({ right: 6, bottom: 4 })
               }, (attachment: RemoteUploadedAttachment) => attachment.fileId)
             }
