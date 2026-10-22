@@ -1,0 +1,9 @@
+{
+  "name": "entry",
+  "version": "1.0.0",
+  "description": "应用壳：Ability、tab 导航、设备域页面、共享组件与路由聚合",
+  "main": "",
+  "author": "",
+  "license": "",
+  "dependencies": {}
+}

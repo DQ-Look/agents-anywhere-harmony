@@ -1,0 +1,9 @@
+{
+  "module": {
+    "name": "files",
+    "type": "shared",
+    "deviceTypes": [
+      "phone"
+    ]
+  }
+}

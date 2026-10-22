@@ -1,0 +1,51 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Restore command line tools cache
+        id: cmdline_tools
+        uses: actions/cache@v4
+        with:
+          path: ~/command-line-tools
+          key: hmos-command-line-tools-${{ hashFiles('.github/workflows/build.yml') }}
+
+      - name: Download HarmonyOS command line tools
+        if: steps.cmdline_tools.outputs.cache-hit != 'true'
+        env:
+          TOOLS_URL: ${{ vars.COMMANDLINE_TOOLS_URL }}
+        run: |
+          if [ -z "$TOOLS_URL" ]; then
+            echo "::error::请先在 Settings → Secrets and variables → Actions → Variables 中设置 COMMANDLINE_TOOLS_URL（HarmonyOS command line tools linux-x64 zip 直链）"
+            exit 1
+          fi
+          rm -rf ~/command-line-tools
+          mkdir -p ~/command-line-tools
+          curl -fL --retry 3 -o /tmp/command-line-tools.zip "$TOOLS_URL"
+          unzip -q /tmp/command-line-tools.zip -d ~/command-line-tools
+          rm -f /tmp/command-line-tools.zip
+
+      - name: Build unsigned HAP
+        run: |
+          TOOLS_DIR="$(dirname "$(dirname "$(find ~/command-line-tools -maxdepth 3 -name hvigorw -type f | head -n1)")")"
+          export DEVECO_SDK_HOME="$(find ~/command-line-tools -maxdepth 3 -type d -name sdk | head -n1)"
+          echo "TOOLS_DIR=$TOOLS_DIR"
+          echo "DEVECO_SDK_HOME=$DEVECO_SDK_HOME"
+          "$TOOLS_DIR/bin/ohpm" install --all
+          "$TOOLS_DIR/bin/hvigorw" assembleHap --mode module -p product=default --no-daemon
+
+      - name: Upload build outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hap-outputs
+          path: entry/build/**/*.hap
+          if-no-files-found: warn
