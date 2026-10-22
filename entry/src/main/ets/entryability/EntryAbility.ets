@@ -40,6 +40,10 @@ export default class EntryAbility extends UIAbility {
     // Initialize the design-system theme state. Default to following the system.
     AppStorage.setOrCreate<string>(APP_MODE_KEY, 'system');
     AppStorage.setOrCreate<boolean>(APP_IS_DARK_KEY, this.resolveIsDark());
+    // Load the persisted appearance preference and apply it (may switch the
+    // app-level color mode when the user chose light/dark explicitly).
+    AppearanceSettings.getInstance().init(this.context);
+    AppearanceSettings.getInstance().loadAndApply();
     // Initialize the user language preference and apply it to the i18n subsystem.
     LanguageSettings.getInstance().init(this.context);
     LanguageSettings.getInstance().loadAndApply();
@@ -64,13 +68,14 @@ export default class EntryAbility extends UIAbility {
   }
 
   // Push the resolved dark state into AppStorage so subscribed pages re-render.
+  // NOTE: do not re-run AppearanceSettings.loadAndApply() here — it calls
+  // setColorMode(), which triggers onConfigurationUpdate(), which calls this
+  // method again: a feedback loop that can block the main thread (appfreeze).
   private syncTheme(): void {
     try {
       const mode = AppStorage.get<string>(APP_MODE_KEY);
       if (mode !== 'light' && mode !== 'dark') {
-    AppStorage.setOrCreate<boolean>(APP_IS_DARK_KEY, this.resolveIsDark());
-    AppearanceSettings.getInstance().init(this.context);
-    AppearanceSettings.getInstance().loadAndApply();
+        AppStorage.setOrCreate<boolean>(APP_IS_DARK_KEY, this.resolveIsDark());
       }
     } catch (err) {
       // Leave the stored value untouched if AppStorage is unavailable.

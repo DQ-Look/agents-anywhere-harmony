@@ -11,6 +11,7 @@ export class AppearanceSettings {
   private store: preferences.Preferences | null = null;
   private readyPromise: Promise<void> | null = null;
   private abilityContext: common.UIAbilityContext | null = null;
+  private lastAppliedMode: AppAppearanceMode | null = null;
 
   static getInstance(): AppearanceSettings {
     if (AppearanceSettings.instance === null) {
@@ -73,12 +74,41 @@ export class AppearanceSettings {
 
   private applyMode(mode: AppAppearanceMode): void {
     AppStorage.setOrCreate<string>(APP_MODE_KEY, mode);
+    this.applySystemColorMode(mode);
+    this.lastAppliedMode = mode;
     if (mode === 'dark') {
       AppStorage.setOrCreate<boolean>(APP_IS_DARK_KEY, true);
     } else if (mode === 'light') {
       AppStorage.setOrCreate<boolean>(APP_IS_DARK_KEY, false);
     } else {
       AppStorage.setOrCreate<boolean>(APP_IS_DARK_KEY, this.resolveSystemDark());
+    }
+  }
+
+  // Keep the OS-level color mode in sync with the in-app choice so the status
+  // bar, navigation bar, system dialogs and pickers follow the same theme as
+  // the design tokens. 'system' defers back to the OS setting. Repeated
+  // requests for the same mode are skipped: each real transition triggers a
+  // synchronous OnConfigurationUpdated chain on the main thread.
+  private applySystemColorMode(mode: AppAppearanceMode): void {
+    const context = this.abilityContext;
+    if (context === null) {
+      return;
+    }
+    if (this.lastAppliedMode === mode) {
+      return;
+    }
+    try {
+      const appContext = context.getApplicationContext();
+      if (mode === 'dark') {
+        appContext.setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_DARK);
+      } else if (mode === 'light') {
+        appContext.setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_LIGHT);
+      } else {
+        appContext.setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_NOT_SET);
+      }
+    } catch (err) {
+      hilog.error(0x0000, LOG_TAG, 'Failed to apply color mode: %{public}s', (err as Error).message);
     }
   }
 
