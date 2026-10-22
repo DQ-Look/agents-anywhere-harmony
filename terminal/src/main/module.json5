@@ -4,6 +4,8 @@
     "type": "shared",
     "deviceTypes": [
       "phone"
-    ]
+    ],
+    "deliveryWithInstall": true,
+    "routerMap": "$profile:router_map"
   }
 }
