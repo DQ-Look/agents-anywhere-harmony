@@ -1,11 +1,6 @@
 {
   "routerMap": [
     {
-      "name": "session_agent_files",
-      "pageSourceFile": "src/main/ets/pages/SessionAgentFilesPage.ets",
-      "buildFunction": "SessionAgentFilesPageBuilder"
-    },
-    {
       "name": "devices",
       "pageSourceFile": "src/main/ets/pages/DevicesPage.ets",
       "buildFunction": "DevicesPageBuilder"
@@ -14,11 +9,6 @@
       "name": "device_detail",
       "pageSourceFile": "src/main/ets/pages/DeviceDetailPage.ets",
       "buildFunction": "DeviceDetailPageBuilder"
-    },
-    {
-      "name": "files",
-      "pageSourceFile": "src/main/ets/pages/FilesPage.ets",
-      "buildFunction": "FilesPageBuilder"
     },
     {
       "name": "pairing",

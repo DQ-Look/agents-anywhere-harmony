@@ -9,7 +9,8 @@
     "common": "file:../common",
     "network": "file:../network",
     "session": "file:../session",
-    "terminal": "file:../terminal"
+    "terminal": "file:../terminal",
+    "files": "file:../files"
   }
 }
 
