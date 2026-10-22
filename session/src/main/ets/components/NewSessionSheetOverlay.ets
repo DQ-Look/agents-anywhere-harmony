@@ -159,6 +159,7 @@ export struct NewSessionSheetOverlay {
         .fill(device.status === 'online' ? getColors().runtimeRunning : getColors().faint)
       Text(device.name)
         .fontSize(13)
+        .fontColor(this.selectedDeviceId === device.id ? getColors().onPrimaryAction : getColors().ink)
         .maxLines(1)
         .textOverflow({ overflow: TextOverflow.Ellipsis })
     }
