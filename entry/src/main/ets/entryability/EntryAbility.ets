@@ -16,12 +16,12 @@
 import { AbilityConstant, Configuration, ConfigurationConstant, UIAbility, Want } from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { window } from '@kit.ArkUI';
-import { AuthSessionStore } from '../auth/AuthSessionStore';
-import { AnnouncementReadStore } from '../auth/AnnouncementReadStore';
-import { AppUpdateIgnoreStore } from '../auth/AppUpdateIgnoreStore';
-import { NewSessionPreferenceStore } from '../auth/NewSessionPreferenceStore';
-import { SidebarViewModeStore } from '../auth/SidebarViewModeStore';
-import { ComposerDraftStore } from '../feature/ComposerDraftStore';
+import { AuthSessionStore } from 'session';
+import { AnnouncementReadStore } from 'session';
+import { AppUpdateIgnoreStore } from 'session';
+import { NewSessionPreferenceStore } from 'session';
+import { SidebarViewModeStore } from 'session';
+import { ComposerDraftStore } from 'session';
 import { APP_IS_DARK_KEY, APP_MODE_KEY } from 'common';
 import { AppearanceSettings } from 'common';
 import { LanguageSettings } from 'common';

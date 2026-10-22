@@ -1,11 +1,6 @@
 {
   "routerMap": [
     {
-      "name": "session_detail",
-      "pageSourceFile": "src/main/ets/pages/SessionDetailPage.ets",
-      "buildFunction": "SessionDetailPageBuilder"
-    },
-    {
       "name": "session_agent_files",
       "pageSourceFile": "src/main/ets/pages/SessionAgentFilesPage.ets",
       "buildFunction": "SessionAgentFilesPageBuilder"
@@ -34,16 +29,6 @@
       "name": "pairing",
       "pageSourceFile": "src/main/ets/pages/DevicePairingPage.ets",
       "buildFunction": "DevicePairingPageBuilder"
-    },
-    {
-      "name": "archived_sessions",
-      "pageSourceFile": "src/main/ets/pages/ArchivedSessionsPage.ets",
-      "buildFunction": "ArchivedSessionsPageBuilder"
-    },
-    {
-      "name": "new_project",
-      "pageSourceFile": "src/main/ets/pages/NewProjectPage.ets",
-      "buildFunction": "NewProjectPageBuilder"
     }
   ]
 }

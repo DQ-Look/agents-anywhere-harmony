@@ -60,7 +60,7 @@ import {
   isWindowsDriveStylePath,
   windowsDriveRootOf,
   windowsParentPath
-} from '../common/FileViewSupport';
+} from 'common';
 import {
   RuntimePermissionStrings,
   LocalizedRuntimePermission,

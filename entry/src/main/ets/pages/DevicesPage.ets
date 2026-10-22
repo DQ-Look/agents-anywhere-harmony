@@ -1,7 +1,7 @@
 import { ApiClient } from 'network';
 import { DevicesApi, RemoteDevice } from 'network';
-import { SharedApiClient } from '../api/SharedApiClient';
-import { AuthSessionStore } from '../auth/AuthSessionStore';
+import { SharedApiClient } from 'session';
+import { AuthSessionStore } from 'session';
 import { errorMessageFrom } from 'common';
 import { APP_IS_DARK_KEY, getColors } from 'common';
 

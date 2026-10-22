@@ -7,7 +7,8 @@
   "license": "",
   "dependencies": {
     "common": "file:../common",
-    "network": "file:../network"
+    "network": "file:../network",
+    "session": "file:../session"
   }
 }
 

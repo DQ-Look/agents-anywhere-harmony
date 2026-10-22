@@ -1,8 +1,8 @@
 import { common, OpenLinkOptions } from '@kit.AbilityKit';
 import { pasteboard } from '@kit.BasicServicesKit';
-import { SharedApiClient } from '../api/SharedApiClient';
+import { SharedApiClient } from 'session';
 import { RemoteDeviceCredential, DevicesApi } from 'network';
-import { AuthSessionStore } from '../auth/AuthSessionStore';
+import { AuthSessionStore } from 'session';
 import { errorMessageFrom } from 'common';
 import {
   PAIRING_STEP_CONNECTION,

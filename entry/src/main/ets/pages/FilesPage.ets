@@ -2,8 +2,8 @@ import { pasteboard } from '@kit.BasicServicesKit';
 import { ApiClient } from 'network';
 import { DevicesApi, RemoteDevice } from 'network';
 import { FilesApi, RemoteDirectoryEntry, RemoteTextFile } from 'network';
-import { SharedApiClient } from '../api/SharedApiClient';
-import { AuthSessionStore } from '../auth/AuthSessionStore';
+import { SharedApiClient } from 'session';
+import { AuthSessionStore } from 'session';
 import { errorMessageFrom } from 'common';
 import {
   FilePreviewLine,
@@ -19,10 +19,10 @@ import {
   isWindowsDriveStylePath,
   windowsDriveRootOf,
   windowsParentPath
-} from '../common/FileViewSupport';
+} from 'common';
 import { FileRowMenuOverlay } from '../components/FileRowMenuOverlay';
-import { HomeMenuAnchor } from '../components/HomeProjectActionMenuOverlay';
-import { EmptyState } from '../components/StateViews';
+import { HomeMenuAnchor } from 'session';
+import { EmptyState } from 'session';
 import { APP_IS_DARK_KEY, getColors } from 'common';
 import { showToast } from 'common';
 

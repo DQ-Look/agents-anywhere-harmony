@@ -2,8 +2,8 @@ import { ApiClient } from 'network';
 import { FilesApi, RemoteAgentFileDownload, RemoteDirectoryEntry, RemoteTextFile } from 'network';
 import { RemoteSessionResponse } from 'network';
 import { SessionsApi } from 'network';
-import { SharedApiClient } from '../api/SharedApiClient';
-import { AuthSessionStore } from '../auth/AuthSessionStore';
+import { SharedApiClient } from 'session';
+import { AuthSessionStore } from 'session';
 import { errorMessageFrom } from 'common';
 import {
   FilePreviewLine,
@@ -13,7 +13,7 @@ import {
   fileEntrySymbol,
   fileEntrySymbolColor,
   findMatchLineIndexes
-} from '../common/FileViewSupport';
+} from 'common';
 import { FileRowMenuOverlay } from '../components/FileRowMenuOverlay';
 import { APP_IS_DARK_KEY, getColors } from 'common';
 import { showToast } from 'common';

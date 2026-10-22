@@ -1,5 +1,5 @@
 import { MdBlock } from 'common';
-import { AgentMarkdownView } from './AgentMarkdownView';
+import { AgentMarkdownView } from 'session';
 import { APP_IS_DARK_KEY, getColors } from 'common';
 
 @Component

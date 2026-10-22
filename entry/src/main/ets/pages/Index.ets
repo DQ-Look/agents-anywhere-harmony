@@ -1,18 +1,18 @@
 import { bundleManager, common, OpenLinkOptions } from '@kit.AbilityKit';
 import { AnnouncementsApi, PublicAnnouncement } from 'network';
 import { AppUpdatesApi, compareUpdateVersions } from 'network';
-import { SharedApiClient } from '../api/SharedApiClient';
-import { AnnouncementReadStore } from '../auth/AnnouncementReadStore';
-import { AppUpdateIgnoreStore } from '../auth/AppUpdateIgnoreStore';
-import { AuthSessionStore } from '../auth/AuthSessionStore';
+import { SharedApiClient } from 'session';
+import { AnnouncementReadStore } from 'session';
+import { AppUpdateIgnoreStore } from 'session';
+import { AuthSessionStore } from 'session';
 import { MdBlock, parseMarkdownBlocks } from 'common';
 import { AppConfig } from 'common';
 import { AnnouncementGateOverlay } from '../components/AnnouncementGateOverlay';
-import { AppUpdatePromptOverlay } from '../components/AppUpdatePromptOverlay';
+import { AppUpdatePromptOverlay } from 'session';
 import { APP_IS_DARK_KEY, getColors } from 'common';
 import { showToast } from 'common';
-import { HomePage } from './HomePage';
-import { LoginPage } from './LoginPage';
+import { HomePage } from 'session';
+import { LoginPage } from 'session';
 
 @Entry
 @Component

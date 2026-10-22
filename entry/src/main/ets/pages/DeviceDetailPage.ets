@@ -2,10 +2,10 @@ import { ApiClient } from 'network';
 import { DevicesApi, RemoteDevice, RemoteDeviceRuntime } from 'network';
 import { RemoteSession } from 'network';
 import { SessionsApi } from 'network';
-import { SharedApiClient } from '../api/SharedApiClient';
-import { AuthSessionStore } from '../auth/AuthSessionStore';
+import { SharedApiClient } from 'session';
+import { AuthSessionStore } from 'session';
 import { errorMessageFrom } from 'common';
-import { ConfirmDialog } from '../components/ConfirmDialog';
+import { ConfirmDialog } from 'session';
 import { APP_IS_DARK_KEY, getColors } from 'common';
 import { showToast } from 'common';
 

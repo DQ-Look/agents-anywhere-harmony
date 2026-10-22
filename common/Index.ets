@@ -7,6 +7,7 @@ export * from './src/main/ets/utils/Toast';
 export * from './src/main/ets/common/ApiException';
 export * from './src/main/ets/common/ApiUrls';
 export * from './src/main/ets/common/AppConfig';
+export * from './src/main/ets/common/FileViewSupport';
 export * from './src/main/ets/common/Json';
 export * from './src/main/ets/common/Markdown';
 export * from './src/main/ets/common/NetworkMonitor';
