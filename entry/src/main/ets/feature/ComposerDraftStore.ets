@@ -1,7 +1,7 @@
 import { preferences } from '@kit.ArkData';
 import { common } from '@kit.AbilityKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { RemoteUploadedAttachment, parseRemoteUploadedAttachment } from '../api/SessionDtos';
+import { RemoteUploadedAttachment, parseRemoteUploadedAttachment } from 'network';
 import { parseJsonRecord, recordsFromArray, objGetArray, objGetOptString } from 'common';
 
 const PREF_NAME: string = 'composer-drafts';

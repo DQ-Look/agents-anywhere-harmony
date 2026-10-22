@@ -3,8 +3,8 @@ import { util } from '@kit.ArkTS';
 import { SharedApiClient } from '../api/SharedApiClient';
 import { AuthSessionStore } from '../auth/AuthSessionStore';
 import { errorMessageFrom } from 'common';
-import { RemoteDownloadedAttachment } from '../api/SessionDtos';
-import { SessionsApi } from '../api/SessionsApi';
+import { RemoteDownloadedAttachment } from 'network';
+import { SessionsApi } from 'network';
 import { getColors } from 'common';
 
 const ATTACHMENT_IMAGE_CACHE_LIMIT = 32;

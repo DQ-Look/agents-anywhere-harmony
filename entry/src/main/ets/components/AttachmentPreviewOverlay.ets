@@ -1,5 +1,5 @@
 import { image } from '@kit.ImageKit';
-import { RemoteTimelineAttachment } from '../api/SessionDtos';
+import { RemoteTimelineAttachment } from 'network';
 import { APP_IS_DARK_KEY, getColors } from 'common';
 import { loadAttachmentPixelMap } from './AttachmentImageView';
 

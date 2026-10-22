@@ -1,7 +1,7 @@
-import { ApiClient } from '../api/ApiClient';
-import { DevicesApi, RemoteDevice, RemoteDeviceRuntime } from '../api/DevicesApi';
-import { RemoteSession } from '../api/SessionDtos';
-import { SessionsApi } from '../api/SessionsApi';
+import { ApiClient } from 'network';
+import { DevicesApi, RemoteDevice, RemoteDeviceRuntime } from 'network';
+import { RemoteSession } from 'network';
+import { SessionsApi } from 'network';
 import { SharedApiClient } from '../api/SharedApiClient';
 import { AuthSessionStore } from '../auth/AuthSessionStore';
 import { errorMessageFrom } from 'common';

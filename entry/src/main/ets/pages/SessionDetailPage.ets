@@ -1,6 +1,6 @@
-import { ApiClient, UploadFilePart } from '../api/ApiClient';
-import { RealtimeApi } from '../api/RealtimeApi';
-import { RealtimeSocketListener, RealtimeWebSocket } from '../api/RealtimeWebSocket';
+import { ApiClient, UploadFilePart } from 'network';
+import { RealtimeApi } from 'network';
+import { RealtimeSocketListener, RealtimeWebSocket } from 'network';
 import { SharedApiClient } from '../api/SharedApiClient';
 import {
   RemoteCommandResult,
@@ -15,8 +15,8 @@ import {
   RemoteTimelineItem,
   RemoteUploadedAttachment,
   hasCapability
-} from '../api/SessionDtos';
-import { SessionsApi } from '../api/SessionsApi';
+} from 'network';
+import { SessionsApi } from 'network';
 import { AuthSessionStore } from '../auth/AuthSessionStore';
 import { errorMessageFrom } from 'common';
 import { MdBlock, parseMarkdownBlocks } from 'common';

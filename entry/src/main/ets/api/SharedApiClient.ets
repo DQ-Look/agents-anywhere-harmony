@@ -1,4 +1,4 @@
-import { ApiClient } from './ApiClient';
+import { ApiClient } from 'network';
 import { AuthSessionStore } from '../auth/AuthSessionStore';
 
 // Keep in sync with the @StorageLink key in pages/Index.ets.

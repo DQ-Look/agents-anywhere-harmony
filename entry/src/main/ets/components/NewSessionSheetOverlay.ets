@@ -1,4 +1,4 @@
-import { RemoteDevice, RemoteDeviceRuntime } from '../api/DevicesApi';
+import { RemoteDevice, RemoteDeviceRuntime } from 'network';
 import { APP_IS_DARK_KEY, getColors } from 'common';
 
 export interface NewSessionPendingAttachment {

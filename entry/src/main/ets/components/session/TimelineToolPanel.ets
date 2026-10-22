@@ -7,7 +7,7 @@
  */
 
 import { pasteboard } from '@kit.BasicServicesKit';
-import { RemoteTimelineFileChange } from '../../api/SessionDtos';
+import { RemoteTimelineFileChange } from 'network';
 import { displayPathFor, fileChangeActionOf } from '../../common/TimelineSummaries';
 import { getColors } from 'common';
 import { DiffCodeView } from '../DiffCodeView';

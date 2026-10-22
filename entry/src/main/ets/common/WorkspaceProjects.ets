@@ -1,4 +1,4 @@
-import { RemoteProject } from '../api/SessionDtos';
+import { RemoteProject } from 'network';
 
 function isWindowsPath(path: string, deviceOs: string | null): boolean {
   if (deviceOs === 'windows') {

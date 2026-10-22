@@ -8,7 +8,7 @@
  * this module stays free of resource lookups.
  */
 
-import { RemoteTimelineFileChange, RemoteTimelineItem } from '../api/SessionDtos';
+import { RemoteTimelineFileChange, RemoteTimelineItem } from 'network';
 
 // View model for one weak tool row (single or inside a group).
 export interface TimelineToolRowModel {

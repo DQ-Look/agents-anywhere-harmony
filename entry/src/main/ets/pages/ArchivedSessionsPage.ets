@@ -1,5 +1,5 @@
-import { SessionsApi } from '../api/SessionsApi';
-import { RemoteProject, RemoteSession, RemoteSessionPage } from '../api/SessionDtos';
+import { SessionsApi } from 'network';
+import { RemoteProject, RemoteSession, RemoteSessionPage } from 'network';
 import { SharedApiClient } from '../api/SharedApiClient';
 import { AuthSessionStore } from '../auth/AuthSessionStore';
 import { HomeMenuAnchor } from '../components/HomeProjectActionMenuOverlay';

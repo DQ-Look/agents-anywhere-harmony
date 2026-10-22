@@ -1,8 +1,8 @@
 import { webview } from '@kit.ArkWeb';
 import { scanBarcode, scanCore } from '@kit.ScanKit';
 import { BusinessError, deviceInfo } from '@kit.BasicServicesKit';
-import { ApiClient } from '../api/ApiClient';
-import { AuthApi } from '../api/AuthApi';
+import { ApiClient } from 'network';
+import { AuthApi } from 'network';
 import { SharedApiClient } from '../api/SharedApiClient';
 import { AuthSessionStore } from '../auth/AuthSessionStore';
 import { LoginServerConnection, resolveLoginServer } from '../auth/LoginServer';

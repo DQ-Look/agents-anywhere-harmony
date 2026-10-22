@@ -1,6 +1,6 @@
 import { bundleManager, common, OpenLinkOptions } from '@kit.AbilityKit';
-import { AnnouncementsApi, PublicAnnouncement } from '../api/AnnouncementsApi';
-import { AppUpdatesApi, compareUpdateVersions } from '../api/AppUpdatesApi';
+import { AnnouncementsApi, PublicAnnouncement } from 'network';
+import { AppUpdatesApi, compareUpdateVersions } from 'network';
 import { SharedApiClient } from '../api/SharedApiClient';
 import { AnnouncementReadStore } from '../auth/AnnouncementReadStore';
 import { AppUpdateIgnoreStore } from '../auth/AppUpdateIgnoreStore';

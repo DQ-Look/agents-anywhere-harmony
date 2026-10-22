@@ -2,7 +2,7 @@ import { preferences } from '@kit.ArkData';
 import { Context } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
-import { announcementTimestamp, PublicAnnouncement } from '../api/AnnouncementsApi';
+import { announcementTimestamp, PublicAnnouncement } from 'network';
 
 const STORE_NAME = 'announcement-read';
 const LOG_TAG = 'AgentsAnywhere.Announcements';

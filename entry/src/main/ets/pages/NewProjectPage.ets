@@ -1,9 +1,9 @@
-import { ApiClient } from '../api/ApiClient';
+import { ApiClient } from 'network';
 import { SharedApiClient } from '../api/SharedApiClient';
-import { DevicesApi, RemoteDevice } from '../api/DevicesApi';
-import { FilesApi, RemoteDirectoryEntry } from '../api/FilesApi';
-import { SessionsApi } from '../api/SessionsApi';
-import { RemoteProject } from '../api/SessionDtos';
+import { DevicesApi, RemoteDevice } from 'network';
+import { FilesApi, RemoteDirectoryEntry } from 'network';
+import { SessionsApi } from 'network';
+import { RemoteProject } from 'network';
 import { AuthSessionStore } from '../auth/AuthSessionStore';
 import { ApiException, errorMessageFrom } from 'common';
 import { availableProjectName, workspaceProject, workspaceProjectName } from '../common/WorkspaceProjects';

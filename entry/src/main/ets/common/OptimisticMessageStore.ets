@@ -1,4 +1,4 @@
-import { RemoteTimelineItem } from '../api/SessionDtos';
+import { RemoteTimelineItem } from 'network';
 
 // Optimistic timeline items are prefixed with this marker so they can be
 // told apart from server-confirmed items without extra flags.

@@ -1,7 +1,7 @@
 // Mirrors android/feature/sessiondetail/SessionRuntimeState.kt notice-input helpers:
 // inputFields (schema-driven text fields), coerceInput (typed coercion + required
 // validation), inputRequestForm / buildPayload (uiSchema question form).
-import { RemoteNoticeAction, RemoteRuntimeNotice } from '../api/SessionDtos';
+import { RemoteNoticeAction, RemoteRuntimeNotice } from 'network';
 
 export interface NoticeInputField {
   key: string;

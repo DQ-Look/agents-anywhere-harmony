@@ -1,7 +1,7 @@
 import { common, OpenLinkOptions } from '@kit.AbilityKit';
 import { pasteboard } from '@kit.BasicServicesKit';
 import { SharedApiClient } from '../api/SharedApiClient';
-import { RemoteDeviceCredential, DevicesApi } from '../api/DevicesApi';
+import { RemoteDeviceCredential, DevicesApi } from 'network';
 import { AuthSessionStore } from '../auth/AuthSessionStore';
 import { errorMessageFrom } from 'common';
 import {

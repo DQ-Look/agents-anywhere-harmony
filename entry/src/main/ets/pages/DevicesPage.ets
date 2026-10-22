@@ -1,5 +1,5 @@
-import { ApiClient } from '../api/ApiClient';
-import { DevicesApi, RemoteDevice } from '../api/DevicesApi';
+import { ApiClient } from 'network';
+import { DevicesApi, RemoteDevice } from 'network';
 import { SharedApiClient } from '../api/SharedApiClient';
 import { AuthSessionStore } from '../auth/AuthSessionStore';
 import { errorMessageFrom } from 'common';

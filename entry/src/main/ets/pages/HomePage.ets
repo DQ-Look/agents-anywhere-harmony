@@ -4,15 +4,15 @@ import { vibrator } from '@kit.SensorServiceKit';
 import { componentUtils, curves } from '@kit.ArkUI';
 import { abilityAccessCtrl } from '@kit.AbilityKit';
 import { Callback } from '@kit.BasicServicesKit';
-import { ApiClient } from '../api/ApiClient';
-import { SessionsApi } from '../api/SessionsApi';
+import { ApiClient } from 'network';
+import { SessionsApi } from 'network';
 import {
   RemoteSession,
   RemoteProject,
   RemoteSessionCreateAndStartRequest,
   RemoteInlineAttachmentRef,
   buildRemoteInlineAttachmentRef
-} from '../api/SessionDtos';
+} from 'network';
 import { SharedApiClient } from '../api/SharedApiClient';
 import {
   RemoteDevice,
@@ -28,11 +28,11 @@ import {
   RemoteRuntimeCapabilityDetail,
   findRuntimeCapability,
   isRuntimeCapabilityUsable
-} from '../api/DevicesApi';
-import { FilesApi, RemoteDirectoryEntry } from '../api/FilesApi';
-import { RealtimeApi } from '../api/RealtimeApi';
-import { RemoteDashboardSnapshot } from '../api/RealtimeDtos';
-import { RealtimeSocketListener, RealtimeWebSocket } from '../api/RealtimeWebSocket';
+} from 'network';
+import { FilesApi, RemoteDirectoryEntry } from 'network';
+import { RealtimeApi } from 'network';
+import { RemoteDashboardSnapshot } from 'network';
+import { RealtimeSocketListener, RealtimeWebSocket } from 'network';
 import { AuthSessionStore } from '../auth/AuthSessionStore';
 import {
   SidebarViewModeStore,

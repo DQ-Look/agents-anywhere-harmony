@@ -1,7 +1,7 @@
-import { ApiClient } from '../api/ApiClient';
-import { FilesApi, RemoteAgentFileDownload, RemoteDirectoryEntry, RemoteTextFile } from '../api/FilesApi';
-import { RemoteSessionResponse } from '../api/SessionDtos';
-import { SessionsApi } from '../api/SessionsApi';
+import { ApiClient } from 'network';
+import { FilesApi, RemoteAgentFileDownload, RemoteDirectoryEntry, RemoteTextFile } from 'network';
+import { RemoteSessionResponse } from 'network';
+import { SessionsApi } from 'network';
 import { SharedApiClient } from '../api/SharedApiClient';
 import { AuthSessionStore } from '../auth/AuthSessionStore';
 import { errorMessageFrom } from 'common';
