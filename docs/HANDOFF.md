@@ -5,6 +5,19 @@
 参考实现：monorepo 的 android/app/src/main/java/com/agentsanywhere/app（Kotlin，分层规则见 android/ARCHITECTURE.md）。
 契约：monorepo 的 contracts/ 与 docs/api/。Server 当前 2.1.0。
 
+## 模块拆分（本仓库完成，2026-10）
+
+自单模块 entry 起按「common → network → session → terminal → files」顺序抽取，每步独立提交且构建绿色，源文件均为纯 move（git rename 100%）：
+
+- common（HAR）：designsystem/i18n/utils/纯工具 13 文件 + FileViewSupport（零网络依赖共享组件）
+- network（HAR）：api/ 13 文件（ApiClient、领域 API、DTO、RealtimeWebSocket）
+- session（HSP）：auth 全部、SharedApiClient、会话域 store/组件/页面 40 文件，自带 router_map 与 293×3 字符串资源；DiffCodeView/ConfirmDialog/StateViews 等被多域复用的组件在此
+- terminal（HSP）：TerminalEmulator/TerminalRender/TerminalPage
+- files（HSP）：FilesPage/SessionAgentFilesPage/FileRowMenuOverlay
+- entry 仅剩：EntryAbility/EntryBackupAbility、Index 壳、设备域 3 页面、AnnouncementGateOverlay、DevicePairingFlow
+
+拆分要点：HSP module.json5 的 `type: shared` 必填 `deliveryWithInstall: true`（schema 00303038）；HSP/HAP 的 BuildProfile 生成在 `<module>/build/default/generated/profile/default/`（HAR 在模块根，均已 gitignore）；HSP 页面资源（$r）不回退到 HAP，需按引用过滤复制到模块 resources（3 locale）。
+
 ## 构建（devecocli 可用）
 - **devecocli 1.3.4 可用**（`devecocli build` / `devecocli build clean`），正常构建直接用它；以下 hvigorw 为备选路径：
   & "D:\ProgramFiles\DevEco Studio\tools\hvigor\bin\hvigorw.bat" --mode module -p product=default -p module=entry@default assembleHap

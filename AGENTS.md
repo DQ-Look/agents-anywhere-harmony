@@ -7,7 +7,7 @@
 - bundle `com.agentsanywhere.app`，compatibleSdkVersion `5.0.0(12)`（API 12），targetSdkVersion `26.0.0`
 - 多模块 hvigor 工程：`common` / `network`（HAR）+ `session` / `terminal` / `files`（HSP）+ `entry`（HAP）
 - `useNormalizedOHMUrl: true`：跨模块 import 使用裸模块名（如 `import { getColors } from 'common'`），模块内使用相对路径
-- 依赖方向严格单向：`common ← network ← session/terminal/files ← entry`；被 ≥2 个域共享的组件留在 `entry`，跨模块共享资源放 `common`
+- 依赖方向严格单向：`common ← network ← session ← terminal/files ← entry`；被 ≥2 个域引用的组件：零网络依赖的上移 `common`，有网络依赖的上移 `session`（主域）；HSP 页面不能引用 `entry`（HAP）内的代码
 - 运行时零三方 npm 依赖，**不引入新 npm 依赖**；网络用 `@kit.NetworkKit` 原生 http/webSocket
 
 ## 硬性约束

@@ -12,12 +12,12 @@
 | --- | --- | --- |
 | `common` | HAR | 设计令牌（颜色/字体/外观）、i18n、通用工具、跨模块共享资源 |
 | `network` | HAR | API 客户端、领域 API、DTO、实时 WebSocket 通道 |
-| `session` | HSP | 登录/会话态、会话列表与时间线 |
+| `session` | HSP | 登录/会话态、会话列表与时间线、被多域复用的共享组件 |
 | `terminal` | HSP | 终端模拟与终端页 |
-| `files` | HSP | 文件浏览与差异查看 |
-| `entry` | HAP | 应用壳：Ability、tab 导航、设备域页面、跨域共享组件、路由聚合 |
+| `files` | HSP | 文件浏览与 Agent 文件页 |
+| `entry` | HAP | 应用壳：Ability、tab 导航、设备域页面、路由聚合 |
 
-依赖方向严格单向：`common ← network ← session / terminal / files ← entry`。禁止反向依赖与循环依赖，详见 [docs/architecture.md](docs/architecture.md)。
+依赖方向严格单向：`common ← network ← session ← terminal/files ← entry`（terminal/files 复用 session 的会话态与共享组件）。禁止反向依赖与循环依赖，详见 [docs/architecture.md](docs/architecture.md)。
 
 ## 构建
 
